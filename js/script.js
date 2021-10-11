@@ -27,18 +27,19 @@ placeholder(word);
 //Captures letter input when clicked.
 guessButton.addEventListener("click", function (e){
 	e.preventDefault(); // prevents reloading default.
-	const captureLetter = letterInput.value;
-	console.log(captureLetter);
-		
-	message.innerText = "";
 	
+	message.innerText = "";//empty message paragraph.
+				
 	const guess = letterInput.value; //grabs the input value from box.*
+	
 	const goodGuess = inputCheck(guess);// will check our player's input.
+	//console.log(goodGuess);
+	
 	if(goodGuess){
 		//mapped to the result of the function validates that the player’s input is returning a letter.
 		makeGuess(guess);
 	}
-	letterInput.value = "";
+	letterInput.value = "";//clears letter input.
 });
 
 //Function to check player's input.
@@ -60,10 +61,11 @@ const inputCheck = function (input){
 	
 };
 
+//Function that will check for same letter input. 
 const makeGuess = function (guess) {
 	guess = guess.toUpperCase();
-	if(guess === guessedLetters){
-		message.innerText = "You already guessed that letter, silly. Try again";
+	if(guessedLetters.includes(guess)){
+		message.innerText = "You already guessed that letter, silly. Try again!";
 	}else{
 		guessedLetters.push(guess);
 		console.log(guessedLetters);
