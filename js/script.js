@@ -3,7 +3,7 @@
 const guessedLettersElement = document.querySelector(".guessed-letters"); //ul guessed letters
 const guessButton = document.querySelector(".guess"); //guess button
 const letterInput = document.querySelector(".letter"); //input letter box
-const wordProgress = document.querySelector(".word-in-progress"); //p where the word in progress will appear
+const wordInProgress = document.querySelector(".word-in-progress"); //p where the word in progress will appear
 const remainingGuess = document.querySelector(".remaining"); //p remaining guess will appear
 const numGuesses = document.querySelector("span"); //span in remaining guess shows number 
 const message = document.querySelector(".message"); //display message when letter is guessed
@@ -14,12 +14,12 @@ const guessedLetters = []; //contains the letters the player guesses.
 
 //Adds placeholder for each letter func.
 const placeholder = function (word) {
-	const letterHolder = []; //empty array which will be filled with same number of circles as letters once it's looped.
+	const placeholderLetters = []; //empty array which will be filled with same number of circles as "word" once it's looped.
 	for(const letter of word){
 		console.log(letter);
-		letterHolder.push = ("●");
+		placeholderLetters.push("●");
 	}
-	wordProgress.innerText = letterHolder.join("");
+	wordInProgress.innerText = placeholderLetters.join("");
 };
 
 placeholder(word);
