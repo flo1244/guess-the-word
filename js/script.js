@@ -25,11 +25,11 @@ placeholder(word);
 
 //Captures letter input when clicked.
 guessButton.addEventListener("click", function (e){
-	e.preventDefault();
+	e.preventDefault(); // prevents reloading default.
 	const captureLetter = letterInput.value;
 	console.log(captureLetter);
 	letterInput.value = "";
 });
 
-
+//
 
