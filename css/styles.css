@@ -53,6 +53,11 @@ h1 {
   padding: 0.25em;
   background: #ffe2d6;
   font-size: 1em;
+  text-transform: uppercase;
+}
+
+.emoji {
+	font-size: 3em;
 }
 
 .underline {
@@ -137,7 +142,7 @@ input:focus {
 /* animatied background */
 .win {
   padding: 0 1em;
-  background: linear-gradient(-45deg, #ff9d64, #f5620c);
+  background: linear-gradient(-45deg, #DBEE39, #39DBEE, #EE39DB);
   background-size: 400% 400%;
   animation: gradient 2s ease infinite;
 }
