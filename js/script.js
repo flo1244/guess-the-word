@@ -183,7 +183,7 @@ playAgain.addEventListener("click", function(){
 	remainingGuesses = 8;//reset number of guesses remaining.
 	remainingGuessSpan.innerText = `${remainingGuesses} guesses`; // resets back to default number of guesses paragraph.
 	guessedLettersElement.innerHTML = ""; //removes the letters.
-	message.innerText = "";
+	message.innerText = "";//removes message.
 	
 	//grabs new word
 	getWord();
